@@ -1,1 +1,1 @@
-# aoc_r_22
+# Advent of code in R 2022
