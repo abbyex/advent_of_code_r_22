@@ -1,17 +1,8 @@
 # DAY 2 - Advent of code in R 
 
-# OPP -> A : Rock, B : Paper, C : Scissors 
-# YOU -> X : Rock, Y : Paper, Z : Scissors
-
-# WIN -> A Y, B Z, C X
-# DRAW -> A X, B Y, C Z
-
-# Sudo code:
-# Store values in a data strcuture (either hashMap or dict)
-# Replace values from input for numbers, and add appropriate value from win/draw data structure 
-#Sum all values to get total 
-
-# For each value in list calculate your score output 
+# Calculate your score in rock, paper, scissors
+# Replace this char value with a numeric value 
+# Sum the total
 
 # Dict values your score 
 # score[["A Y"]] <- 8 # won 
