@@ -4,13 +4,19 @@
 # Find the elf carrying the most calories (Max sum of nums)
 
 # Read txt file 
-input <- readLines("input.txt")
+input <- readLines(
+  file.path(
+    "input", "day_01.txt"
+  )
+)
+
 input <- as.integer(input)
 
 list <- split(input, cumsum(is.na(input)))
-sumList <- lapply(list, function(x) sum(x, na.rm=T))
-max(unlist(sumList))
+# changed variable name and added spaces around function arguments
+sum_list <- lapply(list, function(x) sum(x, na.rm = TRUE))
 
+max(unlist(sum_list))
 
 # Code References:
 # https://www.geeksforgeeks.org/read-lines-from-a-file-in-r-programming-readlines-function/
@@ -19,4 +25,3 @@ max(unlist(sumList))
 # https://stackoverflow.com/questions/59167471/error-in-max-invalid-type-list-of-argument-when-using-dplyr-dbplyr-and
 # https://stackoverflow.com/questions/24232577/classic-case-of-sum-returning-na-because-it-doesnt-sum-nas
 # https://stackoverflow.com/questions/26183929/r-sum-the-elements-of-each-list-on-a-list-and-return-the-result-in-a-data-frame
-
