@@ -14,12 +14,28 @@
 # score[["B X"]] <- 1 # lost w rock 
 # score[["C Y"]] <- 2 # lost w pap
 # score[["A Z"]] <- 3 # lost w sci
+scores <- c(
+  "A Y" = 8,
+  "B Z" = 9,
+  "C X" = 7,
+  "A X" = 4,
+  "B Y" = 5,
+  "C Z" = 6,
+  "B X" = 1,
+  "C Y" = 2,
+  "A Z" = 3
+)
 
-input = readLines("input2.txt")
+input <- readLines(
+  file.path(
+    "input", "day_02.txt"
+  )
+)
 
-sumInput <- as.numeric(c("A Y"=8,"B Z"=9,"C X"=7,"A X"=4,"B Y"=5,"C Z"=6,"B X"=1,"C Y"=2,"A Z"=3)[input])
-sum(sumInput, na.rm=T)
+# This is redundant - the scores vector is already numeric
+# sum_input <- as.numeric(scores[input])
 
+sum(scores[input], na.rm = TRUE)
 
 # Code references:
 # https://stackoverflow.com/questions/7818970/is-there-a-dictionary-functionality-in-r
